@@ -16,7 +16,49 @@
         <script src="index.js"></script>
     </head>
     <body>
-        <h2 id="bigTime"></h2>
+        <div class="d-flex justify-content-center row p-3">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 id="bigTime"></h2>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-center">
+                            <button type="button" class="btn btn-primary" onclick="setTime(dayjs());">Now</button>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="btn-group d-flex justify-content-center" role="group" aria-label="decrease time">
+                                <button type="button" class="btn btn-outline-danger" onclick="setTime(getTime().subtract(1, 'minute'));">-1 minute</button>
+                                <button type="button" class="btn btn-outline-danger" onclick="setTime(getTime().subtract(1, 'hour'));">-1 hour</button>
+                                <button type="button" class="btn btn-outline-danger" onclick="setTime(getTime().subtract(1, 'day'));">-1 day</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="btn-group d-flex justify-content-center" role="group" aria-label="decrease date">
+                                <button type="button" class="btn btn-outline-danger" onclick="setTime(getTime().subtract(1, 'week'));">-1 week</button>
+                                <button type="button" class="btn btn-outline-danger" onclick="setTime(getTime().subtract(1, 'month'));">-1 month</button>
+                                <button type="button" class="btn btn-outline-danger" onclick="setTime(getTime().subtract(1, 'year'));">-1 year</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="btn-group d-flex justify-content-center" role="group" aria-label="increase time">
+                                <button type="button" class="btn btn-outline-success" onclick="setTime(getTime().add(1, 'minute'));">+1 minute</button>
+                                <button type="button" class="btn btn-outline-success" onclick="setTime(getTime().add(1, 'hour'));">+1 hour</button>
+                                <button type="button" class="btn btn-outline-success" onclick="setTime(getTime().add(1, 'day'));">+1 day</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="btn-group d-flex justify-content-center" role="group" aria-label="increase date">
+                                <button type="button" class="btn btn-outline-success" onclick="setTime(getTime().add(1, 'week'));">+1 week</button>
+                                <button type="button" class="btn btn-outline-success" onclick="setTime(getTime().add(1, 'month'));">+1 month</button>
+                                <button type="button" class="btn btn-outline-success" onclick="setTime(getTime().add(1, 'year'));">+1 year</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
             integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
             crossorigin="anonymous"
